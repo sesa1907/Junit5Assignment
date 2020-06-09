@@ -1,9 +1,16 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class PASTangleTest {
 
+	@BeforeEach
+	void before() {
+		System.out.print("before test 6\n");
+	}
+	
 	@Test
 	void test1() {
 		String expectedPyramid = ""
@@ -63,6 +70,11 @@ class PASTangleTest {
 //		System.out.print(actualPyramid);
 		
 		assertEquals(expectedPyramid, actualPyramid);
+	}
+	
+	@AfterEach
+	void after() {
+		System.out.print("before test 6\n\n");
 	}
 
 }
